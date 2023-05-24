@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../../tools/bootstrap-5.2.3-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/index.css">
+	<title>Ingreso Licenciatura</title>
+
+</head>
+
+<body>
+
+	<header>
+
+		<div class="logo">
+			<h4>EDITAR DATOS</h4>
+		</div>
+
+	</header>
+
+
+	<br>
+
+	<div class="container-fluid">
+
+		<div class="row">
+			 <form th:action="@{/aspirantes/{id}(id=${aspirantes.id})}" th:object="${aspirantes}" method="POST">
+				<div class="cuadro">
+
+					<div class="col">
+						<h3 id="y5">DATOS PERSONALES:</h3><br>
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-6 col-sm-6 col-md-3 col-lg-3 col-x1-3 col-xxl-3">
+
+									<br><input type="text" name="CURP" class="info" th:field="*{CURP}" placeholder="CURP"><br>
+
+								</div>
+								<div class="col-6 col-sm-6 col-md-2 col-lg-2 col-x1-2 col-xxl-2">
+									<br><input type="text" name="nombre" class="info" th:field="*{nombre}"
+										placeholder="Nombre"><br>
+								</div>
+								<div class="col-6 col-sm-6 col-md-2 col-lg-2 col-x1-2 col-xxl-2">
+									<br><input type="text" name="apellidoP" th:field="*{apellidoP}"class="info"
+										placeholder="Apellido paterno"><br>
+								</div>
+								<div class="col-6 col-sm-6 col-md-2 col-lg-2 col-x1-2 col-xxl-2">
+									<br><input type="text" name="apellidoM" th:field="*{apellidoM}" class="info"
+										placeholder="Apellido materno"><br>
+								</div>
+								<div class="col-6 col-sm-6 col-md-3 col-lg-3 col-x1-3 col-xxl-3">
+									<br><input type="text" name="correo" class="info"
+										th:field="*{correo}" placeholder="Correo electrónico"><br>
+								</div>
+								<div class="col-6 col-sm-6 col-md-4 col-lg-4 col-x1-4 col-xxl-4">
+									<label></label>
+									<input type="text" name="telefono" class="info" th:field="*{telefono}" placeholder="Teléfono"><br>
+								</div>
+								<div class="col-6 col-sm-6 col-md-4 col-lg-4 col-x1-4 col-xxl-4">
+									<label for="fecha">Fecha de nacimiento:</label>
+									<input type="date" id="fecha" name="fecha_nacimiento" class="info" th:field="*{fecha_nacimiento}"
+										placeholder="Fecha de nacimiento"><br>
+								</div>
+
+
+								<div class="col-6 col-sm-6 col-md-4 col-lg-4 col-x1-4 col-xxl-4">
+									<label></label>
+									<input type="text" name="nss" class="info2 text-left" th:field="*{nss}" placeholder="NSS"><br>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="cuadro">
+					<div class="col">
+						<h3 id="y5">DATOS DE DOMICILIO:</h3><br>
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-6 col-sm-6 col-md-3 col-lg-3 col-x1-3 col-xxl-3">
+									<input type="text" name="nacionalidad" class="info" th:field="*{nacionalidad}" placeholder="Nacionalidad"><br>
+								</div>
+								<div class="col-6 col-sm-6 col-md-3 col-lg-3 col-x1-3 col-xxl-3">
+									<input type="text" name="estado" class="info" th:field="*{estado}" placeholder="Estado"><br>
+								</div>
+								<div class="col-6 col-sm-6 col-md-3 col-lg-3 col-x1-3 col-xxl-3">
+									<input type="text" name="municipio" class="info" th:field="*{municipio}" placeholder="Municipio"><br>
+								</div>
+								<div class="col-6 col-sm-6 col-md-3 col-lg-3 col-x1-3 col-xxl-3">
+									<input type="text" name="codigo_postal" class="info2" th:field="*{codigo_postal}"
+										placeholder="Código postal"><br>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="cuadro">
+					<div class="col">
+						<h3 id="y5">DATOS ESCOLARES:</h3><br>
+						<div class="container-fluid">
+							<div class="row">
+
+								<div class="col-6 col-sm-6 col-md-3 col-lg-3 col-x1-3 col-xxl-3">
+									<label></label>
+									<input type="text" name="escuela_procedencia" class="info" th:field="*{escuela_procedencia}"
+										placeholder="Preparatoria de procedencia"><br>
+								</div>
+								<div class="col-6 col-sm-6 col-md-3 col-lg-3 col-x1-3 col-xxl-3">
+									<label></label>
+									<input type="text" name="especialidad_cursada" class="info" th:field="*{especialidad_cursada}"
+										placeholder="Especialidad de preparatoria"><br>
+								</div>
+								<div class="col-6 col-sm-6 col-md-3 col-lg-3 col-x1-3 col-xxl-3">
+									<label for="carrera1">Carrera a elegir(opcion 1)</label>
+									<select id="carrera1" name="carrera1"  th:field="*{carrera1}" class="info">
+										<option value="Computación">Computación</option>
+										<option value="Mecatrónica">Mecatrónica</option>
+										<option value="Zootecnia">Zootecnia</option>
+										<option value="Diseño">Diseño</option>
+										<option value="Acuicultura">Acuicultura</option>
+										<option value="Matematicas">Matematicas</option>
+									</select><br>
+									<script src="../js/index/carrera.js"></script>
+								</div>
+								<div class="col-6 col-sm-6 col-md-3 col-lg-3 col-x1-3 col-xxl-3">
+									<label for="carrera2">Carrera a elegir(opcion 2)</label>
+									<select id="carrera2" name="carrera2" th:field="*{carrera2}" class="info">
+										<option value="Mecatrónica">Mecatrónica</option>
+										<option value="Computación">Computación</option>
+										<option value="Zootecnia">Zootecnia</option>
+										<option value="Diseño">Diseño</option>
+										<option value="Acuicultura">Acuicultura</option>
+										<option value="Matematicas">Matematicas</option>
+									</select><br>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-5 col-sm-4 col-md-2 col-lg-2 col-x1-2 col-xxl-2">
+					<button div class="boton">Volver</button><br>
+				</div>
+				<div class="col-2 col-sm-4 col-md-8 col-lg-8 col-x1-8 col-xxl-8">
+
+				</div>
+				<div class="col-5 col-sm-4 col-md-2 col-lg-2 col-x1-2 col-xxl-2">
+
+					<button div class="boton" type="submit">Guardar</button><br>
+				</div>
+			</form>
+		</div>
+
+	</div>
+
+
+
+</body>
+
+</html>

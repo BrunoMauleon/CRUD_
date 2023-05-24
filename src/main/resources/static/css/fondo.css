@@ -1,0 +1,29 @@
+body {
+  background-color: #DCF6E8;
+}
+
+@media (min-width: 576px) {
+  body {
+    background-color: #DCF6E8;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    background-color: #DCF6E8;
+  }
+}
+@media (min-width: 992px) {
+  body {
+    background-color: #DCF6E8;
+  }
+}
+@media (min-width: 1200px) {
+  body {
+    background-color: #DCF6E8;
+  }
+}
+@media (min-width: 1400px) {
+  body {
+    background-color: #DCF6E8;
+  }
+}

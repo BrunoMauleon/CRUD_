@@ -1,0 +1,159 @@
+@font-face {
+  font-family: nuevo;
+  src: url("../../tools/font/Inter-VariableFont_slnt,wght.ttf");
+}
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.general {
+  margin: auto;
+  margin-top: 50px;
+  width: 960px;
+  height: 800px;
+  background-color: blue;
+}
+
+.cuadro {
+  border: 2px solid rgb(0, 255, 255);
+  padding: 10px;
+  margin: 1.5% auto;
+  width: 90%;
+}
+
+.cuadro1 {
+  padding: 10px;
+  margin: 1.5% auto;
+  width: 90%;
+}
+
+#y5 {
+  font-family: nuevo;
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 70px;
+  background-color: #15CC8A;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo img {
+  height: 90px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+@media (max-width: 700px) {
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.logo h1 {
+  font-family: "face";
+  color: #FFFFFF;
+}
+
+.logo h2 {
+  font-family: "nuevo";
+  color: #FFFFFF;
+}
+
+.logo h3 {
+  font-family: "nuevo";
+  color: #FFFFFF;
+}
+
+.logo h4 {
+  font-family: "nuevo";
+  color: #FFFFFF;
+}
+
+.contenido {
+  left: 113px;
+  top: 400px;
+}
+
+.info {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 3px 18px 3px 11px;
+  gap: 10px;
+  position: relative;
+  width: 100%;
+  max-width: 321px;
+  height: auto;
+  word-wrap: break-word;
+  background: #D9D9D9;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.info2 {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 3px 18px 3px 11px;
+  gap: 10px;
+  position: relative;
+  width: 60%;
+  max-width: 321px;
+  height: auto;
+  word-wrap: break-word;
+  background: #D9D9D9;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.boton {
+  text-align: center;
+  width: 100%;
+  background: #77FF8D;
+  -webkit-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#boton1 {
+  text-align: right;
+}
